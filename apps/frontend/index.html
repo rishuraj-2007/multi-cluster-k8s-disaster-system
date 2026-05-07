@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi Cluster App</title>
+</head>
+<body>
+    <h1>🚀 Multi-Cluster Kubernetes Project</h1>
+    <button onclick="callAPI()">Call Backend</button>
+
+    <p id="result"></p>
+
+    <script>
+        function callAPI() {
+            fetch("http://localhost:5000/")
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById("result").innerText = data.message;
+            });
+        }
+    </script>
+</body>
+</html>
